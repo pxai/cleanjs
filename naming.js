@@ -35,11 +35,30 @@ const functionNamingBad = () => {
     function foo (p) {
       return p * 1.16;
     }
+
+    function adult (a) {
+        return a >= 18;
+    }
 }
 
 const functionNaming = () => {
     const TAXES = 1.16;
     function add (price) {
         return price * TAXES;
+    }
+
+    const ADULT_AGE = 18;
+    function isAdult (age) {
+        return age >= ADULT_AGE;
+    }
+}
+
+const classNamingBad = () => {
+    class A {
+    }
+}
+
+const classNaming = () => {
+    class Validator {
     }
 }
