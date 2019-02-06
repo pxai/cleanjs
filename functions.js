@@ -1,3 +1,19 @@
+const checkBad = () => {
+    const guy = { name: 'Dude', age: 34 };
+    function showAge (person) {
+        if (person) {
+            return person.age;
+        }
+    }
+}
+
+const checkBetter = () => {
+    const guy = { name: 'Dude', age: 34 };
+    function showAge (person) {
+        return person && person.age;
+    }
+}
+
 const defaultsBad = () => {
     function total (subtotal, tax) {
         let taxes = tax || 1;
