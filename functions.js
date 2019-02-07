@@ -27,3 +27,13 @@ const defaults = () => {
         return subtotal * tax;
     }
 }
+
+const manyArgumentsBad = () => {
+    function doStuff (name, age, address, taxes, phone) {
+    }
+}
+
+const manyArguments = () => {
+    function doStuff ({name, age, address, taxes, phone}) {
+    }
+}
