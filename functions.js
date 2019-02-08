@@ -37,3 +37,46 @@ const manyArguments = () => {
     function doStuff ({name, age, address, taxes, phone}) {
     }
 }
+
+const doOneThingBad = () => {
+    function sumAllOdds (numbers) {
+        const odds = [];
+        let total = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 !== 0) {
+                odds.push(numbers[i]);
+            }
+        }
+
+        for (let i = 0; i < odds.length; i++) {
+            total += odds[i];
+        }
+
+        return total;
+    }
+}
+
+const doOneThingBetter = () => {
+    function filterOdds (numbers) {
+        const odds = [];
+
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 !== 0) {
+                odds.push(numbers[i]);
+            }
+        }
+        return odds;
+    }
+
+    function addAll (numbers) {
+        let total = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+        }
+    }
+
+   function addOdds (numbers) {
+        return addAll(filterOdds(numbers));
+   }
+}
