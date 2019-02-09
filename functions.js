@@ -80,3 +80,9 @@ const doOneThingBetter = () => {
         return addAll(filterOdds(numbers));
    }
 }
+
+const doOneThingJS = () => {
+    function addOdds (numbers) {
+        return numbers.filter( n => n % 2 !== 0).reduce((a, b) => a + b, 0);
+    }
+}
