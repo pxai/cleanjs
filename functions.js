@@ -86,3 +86,19 @@ const doOneThingJS = () => {
         return numbers.filter( n => n % 2 !== 0).reduce((a, b) => a + b, 0);
     }
 }
+
+const oneLevelAbstractionBad = () => {
+    function doStuff () {
+        // stuff..
+
+        // stuff ..
+    }
+}
+
+const oneLevelAbstraction = () => {
+    function doOneStuff () {
+        // stuff ..
+    }
+
+    function doOne () {
+    }
