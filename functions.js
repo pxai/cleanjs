@@ -102,3 +102,36 @@ const oneLevelAbstraction = () => {
 
     function doOne () {
     }
+}
+
+const duplicationBad = () => {
+    function sum (arrayA, arrayB) {
+        let odds1 = [];
+        let odds2 = [];
+
+        for (let i = 0; i < arrayA.length; i++) {
+            if (arrayA[i] % 2 !== 0) {
+                odds1.push(arrayA[i]);
+            }
+        }
+
+        for (let i = 0; i < arrayB.length; i++) {
+            if (arrayB[i] % 2 !== 0) {
+                odds1.push(arrayB[i]);
+            }
+        }
+
+        return odds1 + odds2;
+    }
+}
+
+const duplicationGood = () => {
+    function sum (arrayA, arrayB) {
+        return odds(arrayA).length + odds(arrayB).length;
+    }
+
+    function odds (arrayA) {
+        return arrayA.filter( item => item % 2 !== 0);
+    }
+
+}
