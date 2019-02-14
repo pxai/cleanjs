@@ -17,3 +17,23 @@ const conditionalFlags = () => {
       return subtotal + TAX - DISCOUNT;
     }
 }
+
+const negativeConditionalsBad = () => {
+    function isNotAdult (age) {
+      return age < 18;
+    }
+
+    if (!isNotAdult(32)) {
+        // ...
+    }
+}
+
+const negativeConditionals = () => {
+    function isAdult (age) {
+      return age >= 18;
+    }
+
+    if (isAdult(32)) {
+        // ...
+    }
+}
