@@ -18,6 +18,21 @@ const conditionalFlags = () => {
     }
 }
 
+const encapsulateConditionalsBad = () => {
+    if (age < 18 && age > 65 && isDisabled)  {
+        // ....
+    }
+}
+
+const encapsulateConditionalsBad = () => {
+    function isEligigle() {
+        return age < 18 && age > 65 && isDisabled;
+    }
+
+    if (isEligile()) {
+        // ...
+    }
+}
 const negativeConditionalsBad = () => {
     function isNotAdult (age) {
       return age < 18;
